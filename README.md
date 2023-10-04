@@ -73,3 +73,59 @@ Console.WriteLine($"Hello {firstName}");
         // Do some other stuff
     }
     ```
+- You can also remove the curly braces if the code block contains a single line:
+    ```
+    bool flag = true;
+    if (flag)
+    {
+        Console.WriteLine(flag);
+    }
+    // Can be written instead as:
+    bool flag = true;
+    if (flag)
+        Console.WriteLine(flag);
+    // This could also work on a single line but is against convention
+    ```
+- Only remove the curly braces of a code block when it makes the code more readable. It's always acceptable to include curly braces.
+
+### Switch statements
+
+- You can assign the same behaviour to different cases if needed:
+    ```
+    int employeeLevel = 100;
+    string employeeName = "John Smith";
+
+    string title = "";
+
+    switch (employeeLevel)
+    {
+        case 100:
+        case 200:
+            title = "Senior Associate";
+            break;
+        case 300:
+            title = "Manager";
+            break;
+        case 400:
+            title = "Senior Manager";
+            break;
+        default:
+            title = "Associate";
+            break;
+    }
+
+    Console.WriteLine($"{employeeName}, {title}");
+    ```
+
+### Nullable types
+
+- You can make a type nullable by appending a `?` to it:
+    ```
+    string? readResult;
+    Console.WriteLine("Enter a string:");
+    do
+    {
+        readResult = Console.ReadLine();
+    } while (readResult == null);
+    ```
+

@@ -150,3 +150,12 @@ Console.WriteLine($"Hello {firstName}");
     if (result > 0)
         Console.WriteLine($"Measurement (w/ offset): {50 + result}");
     ```
+
+### Pass by value/reference
+
+- Most methods require you pass arguments by value (this is the default behaviour)
+- However, sometimes you need to pass arguments by reference, using the `ref` keyword:
+    ```
+    // Change the size of an array called pallets, using the ref keyword, to 6
+    Array.Resize(ref pallets, 6);
+    ```

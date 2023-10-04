@@ -129,3 +129,24 @@ Console.WriteLine($"Hello {firstName}");
     } while (readResult == null);
     ```
 
+### Extra return values
+
+- In C#, as well as the usual `return` statement, you can also return values using the `out` keyword.
+- I've seen this in int.TryParse() so far:
+    ```
+    string value = "bad";
+    int result = 0;
+    // int.TryParse() returns a boolean as to whether it was successful
+    // As well as setting a variable to the result of the conversion!
+    if (int.TryParse(value, out result))
+    {
+        Console.WriteLine($"Measurement: {result}");
+    }
+    else
+    {
+        Console.WriteLine("Unable to report the measurement.");
+    }
+
+    if (result > 0)
+        Console.WriteLine($"Measurement (w/ offset): {50 + result}");
+    ```

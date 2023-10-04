@@ -305,7 +305,7 @@ do
                 if (ourAnimals[i, 0] != "ID #: ")
                 {
                     // Check age is default value
-                    if (ourAnimals[i, 2] == "Age: ?")
+                    if (ourAnimals[i, 2] == "Age: ?" || ourAnimals[i, 2] == "Age: ")
                         {
                             // If it is, ask the user to enter the age (display pet id)
                             do
@@ -322,8 +322,8 @@ do
                             // Update entry with pet age
                             ourAnimals[i, 2] = $"Age: {animalAge}";
                         }
-                    // Check if physical description is null or length 0
-                    if (ourAnimals[i, 4] == "Physical description: " || ourAnimals[i, 4] == "Physical description: tbd" || ourAnimals[i, 4].Length == 0 || ourAnimals[i, 4] == null)
+                    // Check if physical description is default value
+                    if (ourAnimals[i, 4] == "Physical description: " || ourAnimals[i, 4] == "Physical description: tbd")
                     {
                         // If so, ask the user to enter the description (display pet id)
                         validEntry = false;
@@ -339,7 +339,7 @@ do
                                     validEntry = true;
                             }
                         } while (validEntry == false);
-                        // Update entry with pet age
+                        // Update entry with physical description
                         ourAnimals[i, 4] = $"Physical description: {animalPhysicalDescription}";
                     }
                 }
@@ -352,7 +352,67 @@ do
 
         case "4":
             // Ensure animal nicknames and personality descriptions are complete
-            Console.WriteLine("Challenge Project - please check back soon to see progress.");
+
+            // Check how many pets there are
+            petCount = 0;
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    petCount += 1;
+                }
+            }
+
+            // Iterate through the pets
+            for (int i = 0; i < petCount; i++)
+            {
+                // Check pet ID is not default value
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    // Check nickname is default value
+                    if (ourAnimals[i, 3] == "Nickname: tbd" || ourAnimals[i, 3] == "Nickname: ")
+                    {
+                        // If it is, ask the user to enter the nickname (display pet id)
+                        validEntry = false;
+                        do
+                        {
+                            Console.WriteLine($"Enter a nickname for {ourAnimals[i, 0]}");
+                            readResult = Console.ReadLine();
+                            if (readResult != null)
+                            {
+                                animalNickname = readResult.ToLower();
+                                // Check the entered nickname is not empty
+                                if (animalNickname.Length != 0)
+                                    validEntry = true;
+                            }
+                        } while (validEntry == false);
+                        // Update entry with physical description
+                        ourAnimals[i, 3] = $"Nickname: {animalNickname}";
+                    }
+                    // Check if personality is default value
+                    if (ourAnimals[i, 5] == "Personality: " || ourAnimals[i, 4] == "Personality: tbd")
+                    {
+                        // If so, ask the user to enter the personality (display pet id)
+                        validEntry = false;
+                        do
+                        {
+                            Console.WriteLine($"Enter a personality description for {ourAnimals[i, 0]} (likes or dislikes, tricks, energy level)");
+                            readResult = Console.ReadLine();
+                            if (readResult != null)
+                            {
+                                animalPersonalityDescription = readResult.ToLower();
+                                // Check the entered description is not empty
+                                if (animalPersonalityDescription.Length != 0)
+                                    validEntry = true;
+                            }
+                        } while (validEntry == false);
+                        // Update entry with Personality
+                        ourAnimals[i, 5] = $"Personality: {animalPersonalityDescription}";
+                    }
+                }
+            }
+
+            Console.WriteLine("Nickname and personality description fields are complete for all of our friends.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
             break;

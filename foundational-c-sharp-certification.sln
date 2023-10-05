@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinAndMaxValues", "MinAndMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMiniGame", "ConsoleMiniGame\ConsoleMiniGame.csproj", "{C622C398-CFEA-4059-9565-B90C045E6FFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{938EE5F8-1BA9-4F0A-B3F9-76196A09D593}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938EE5F8-1BA9-4F0A-B3F9-76196A09D593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938EE5F8-1BA9-4F0A-B3F9-76196A09D593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938EE5F8-1BA9-4F0A-B3F9-76196A09D593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938EE5F8-1BA9-4F0A-B3F9-76196A09D593}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

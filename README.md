@@ -213,3 +213,9 @@ void PrintArray()
 Each variable has its own copy of the value, so the original variable isn't modified
 - With reference types, the address of the value is passed into the method.
 The variable given to the method references the value at that address, so operations on that variable affect the value that is referenced by the other
+
+### Strings
+
+It is important to remember that `string` is a reference type, but it is *immutable*.
+That means once it has been assigned a value, it can't be altered.
+In C#, when methods and operators are used to modify a string, the result that is returned is actually a new string object.

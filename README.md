@@ -181,3 +181,10 @@ Console.WriteLine(result);
     // Change the size of an array called pallets, using the ref keyword, to 6
     Array.Resize(ref pallets, 6);
     ```
+
+### Constants
+
+Learnt in the context of avoiding *Magic values* - values which are hardcoded instead of being stored in variables.
+
+Use the `const` keyword to define and initialise a variable whose value can never be changed:
+const string message = "I cannot be changed";

@@ -31,6 +31,28 @@ string firstName = "Andy";
 Console.WriteLine($"Hello {firstName}");
 ```
 
+You can add modifiers to the variable name to have it formatted in a certain way. For example, `:c` will format the variable as currency:
+```
+decimal price = 123.45m;
+int discount = 50;
+Console.WriteLine($"Price: {price:C} (Save {discount:C})");
+```
+The currency displayed depends on the country and display language of the machine the code is running on,
+for example if "English (United States)" is set, then the price and discount will be shown in dollars.
+
+Modifiers encountered so far:
+- `:C` = currency
+- `:N` = number - display 2 decimal points by defualt, add a number afterwards to show a different amount e.g. `:N4` N.B. this rounds!
+- `:P` = percentage - add a number afterwards to control the number of values displayed after the percent e.g. `:P3` N.B this rounds!
+
+You can also do composite formatting similar to Java:
+```
+string first = "Hello";
+string second = "World";
+string result = string.Format("{0} {1}!", first, second);
+Console.WriteLine(result);
+```
+
 ### Stateful vs stateless
 
 - Some methods don't rely on the current state of the application to work properly - these are **stateless methods**, also known as **static methods**

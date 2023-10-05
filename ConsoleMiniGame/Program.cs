@@ -25,6 +25,12 @@ int food = 0;
 InitializeGame();
 while (!shouldExit)
 {
+    if (TerminalResized())
+    {
+        Console.Clear();
+        Console.Write("Console was resized. Program exiting.");
+        shouldExit = true;
+    }
     Move();
 }
 

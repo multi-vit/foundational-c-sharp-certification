@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RehomePets", "RehomePets\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinAndMaxValues", "MinAndMaxValues\MinAndMaxValues.csproj", "{F86D6AD9-3F56-4B96-AA4C-CC71E55CE2B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMiniGame", "ConsoleMiniGame\ConsoleMiniGame.csproj", "{C622C398-CFEA-4059-9565-B90C045E6FFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F86D6AD9-3F56-4B96-AA4C-CC71E55CE2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F86D6AD9-3F56-4B96-AA4C-CC71E55CE2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F86D6AD9-3F56-4B96-AA4C-CC71E55CE2B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C622C398-CFEA-4059-9565-B90C045E6FFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

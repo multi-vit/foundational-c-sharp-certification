@@ -33,6 +33,8 @@ while (!shouldExit)
         Console.Write("Console was resized. Program exiting.");
         shouldExit = true;
     }
+    if (PlayerIsSick())
+        FreezePlayer();
     Move(otherKeysExit: false);
     if (GotFood())
     {
@@ -68,6 +70,12 @@ bool GotFood()
     return playerY == foodY && playerX == foodX;
 }
 
+// Returns true if the player appearance represents a sick state
+bool PlayerIsSick()
+{
+    return player.Equals(states[2]);
+}
+
 // Changes the player to match the food consumed
 void ChangePlayer()
 {
@@ -79,7 +87,7 @@ void ChangePlayer()
 // Temporarily stops the player from moving
 void FreezePlayer()
 {
-    System.Threading.Thread.Sleep(1000);
+    Thread.Sleep(1000);
     player = states[0];
 }
 

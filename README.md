@@ -188,3 +188,28 @@ Learnt in the context of avoiding *Magic values* - values which are hardcoded in
 
 Use the `const` keyword to define and initialise a variable whose value can never be changed:
 const string message = "I cannot be changed";
+
+### Methods
+
+- Method names should be Pascal case and generally shouldn't start with digits
+- You don't have to have a method defined before you call it
+- It's common to define all methods at the end of a program. For example:
+```
+int[] a = {1,2,3,4,5};
+
+Console.WriteLine("Contents of Array:");
+PrintArray();
+
+void PrintArray()
+{
+    foreach (int x in a)
+    {
+        Console.Write($"{x} ");
+    }
+    Console.WriteLine();
+}
+```
+- When an argument is passed to a method, value type variables have their values copied into the method.
+Each variable has its own copy of the value, so the original variable isn't modified
+- With reference types, the address of the value is passed into the method.
+The variable given to the method references the value at that address, so operations on that variable affect the value that is referenced by the other

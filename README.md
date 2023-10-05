@@ -214,6 +214,44 @@ Each variable has its own copy of the value, so the original variable isn't modi
 - With reference types, the address of the value is passed into the method.
 The variable given to the method references the value at that address, so operations on that variable affect the value that is referenced by the other
 
+#### Named and optional parameters
+
+C# allows the use of named and optional parameters.
+These types of parameters let you select which arguments you want to supply to the method,
+so you aren't restricted to the structure defined in the method signature.
+
+Take a method called `RSVP` as an example:
+```
+void RSVP(string name, int partySize, string allergies, bool inviteOnly) 
+{
+    // Do stuff here
+}
+```
+
+You could call it in the normal way:
+`RSVP("Linh", 2, "none", false);`
+
+However, when calling a method that accepts many parameters, it can be tricky to understand what the arguments represent.
+Using named arguments can improve the readability of your code.
+Use a named argument by specifying the parameter name followed by the argument value:
+`RSVP(name: "Linh", partySize: 2, allergies: "none", inviteOnly: false);`
+**N.B.** Named arguments, when used with positional arguments, are valid if they're used in the correct position.
+Named arguments are also valid as long as they're not followed by any positional arguments.
+For example, including "Linh" and 2 at the end would be invalid:
+
+`RSVP(allergies: "none", inviteOnly: false, "Linh", 2);`
+
+Optional parameters allow you to omit those arguments when calling the method. They are set when declaring the method:
+```
+void RSVP(string name, int partySize = 1, string allergies = "none", bool inviteOnly = true)
+{
+    // partySize defaults to 1 if not passed in as an argument
+    // allergies to "none"
+    // inviteOnly to true
+    // Do stuff here
+}
+```
+
 ### Strings
 
 It is important to remember that `string` is a reference type, but it is *immutable*.
